@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+<head>
+   <!--<link rel="stylesheet" href="/media/css/style.css" /> -->
+   <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <link rel="stylesheet" href="{% static 'ecolending/bootstrap-4.3.1/css/bootstrap.min.css' %}">
+   <title>{% block title %}Le crédit autrement{% endblock %}</title>
+</head>
+<body class=>
+<header>
+  <div class="cookies-agreement">
+    <div class="container">
+      <div class="text">
+        <p>Nous utilisons des cookies afin de vous offrir la meilleure expérience possible sur notre site web.
+          En continuant sur notre site, vous acceptez ces conditions.
+          <a href="/politique-dutilisation-des-cookies">En savoir plus</a>
+        </p>
+      </div>
+      <div class="actions">
+        <a onclick="enableCookies()">J'ai compris</a>
+      </div>
+    </div>
+  </div>
+  <div class="nav-container">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      {% block nav %}
+      <a class="navbar-brand" href="#">
+        <img src="{% static 'ecolending/logo.png' %}" alt="logo">
+      </a>
+      <div class="menu-navbar-container">
+  			<ul class="navbar-nav">
+  				<li class="nav-item dropdown">
+  					<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">emprunter</a>
+  					<div class="dropdown-menu">
+  						<a class="dropdown-item" href="#">entreprises</a>
+  						<a class="dropdown-item" href="#">tester votre éligibilité</a>
+  						<a class="dropdown-item" href="#">histoires d&#8217;emprunteurs</a>
+  						<a class="dropdown-item" href="#">FAQ</a>
+            </div>
+  				</li>
+
+          <li class="nav-item dropdown">
+  					<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Prêter</a>
+  					<div class="dropdown-menu">
+  						<a class="dropdown-item" href="#">particuliers</a>
+  						<a class="dropdown-item" href="#">institutionnels</a>
+  						<a class="dropdown-item" href="#">statistiques</a>
+  						<a class="dropdown-item" href="#">projets financés</a>
+              <a class="dropdown-item" href="#">FAQ</a>
+            </div>
+  				</li>
+
+          <li class="nav-item dropdown">
+  					<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Partenaire</a>
+  					<div class="dropdown-menu">
+  						<a class="dropdown-item" href="#">programme</a>
+  						<a class="dropdown-item" href="#">FAQ</a>
+            </div>
+  				</li>
+
+          <li class="nav-item dropdown">
+  					<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">A propos</a>
+  					<div class="dropdown-menu">
+  						<a class="dropdown-item" href="#">qui sommes nous</a>
+  						<a class="dropdown-item" href="#">carrières</a>
+  						<a class="dropdown-item" href="#">presse</a>
+  						<a class="dropdown-item" href="#">blog</a>
+              <a class="dropdown-item" href="#">nos valeurs</a>
+            </div>
+  				</li>
+  		</ul>
+
+      <div class="actions">
+        <a href="#" class="btn btn-info" role="button">Link Button</a>
+      </div>
+    </nav>
+  </div>
+
+
+
+      {% endblock %}
+</header>
+   <section id="content">
+       {% block content %}{% endblock %}
+   </section>
+<footer>&copy; crowlending.com</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="{% static 'ecolending/bootstrap-4.3.1/js/bootstrap.min.js' %}"></script>
+</body>
+</html>
